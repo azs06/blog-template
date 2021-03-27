@@ -9,7 +9,7 @@
 </head>
 <body class="body">
     <main class="site-container">
-        <header>
+        <header class="navigation-header">
             <nav>
                 <ul>
                     <li><a>Home</a></li>
@@ -21,9 +21,9 @@
         <div class="container">
             <section class="hero-section">
                 <canvas width="1440" height="715"></canvas>
-                <div class="image-container">
+                <figure class="image-container">
                     <img src="https://avatars.githubusercontent.com/u/1593663?v=4" alt="">
-                </div>
+                </figure>
                 <div class="hero-section__intro">
                     <p>
                         <strong class="hero-section__intro-hello">Hello, I’m Md. Atiquzzaman Soikat</strong>
@@ -41,8 +41,8 @@
                 </div>
             </section>
             <section class="blog-section">
-                <header class="heading">
-                    <h3>Blog</h3>
+                <header class="heading blog-heading">
+                    <h3 class="blog-section__title">Blog</h3>
                 </header>
                 <article class="blog-card">
                     <header>
@@ -96,14 +96,15 @@
         </div>
         <footer>
             <div class="footer-container">
-                <p class="copyright">Copyright</p>
+                <p class="copyright">Copyright &copy; 2021</p>
                 <nav class="footer-links">
                     <ul>
-                        <li>Github</li>
-                        <li>Stackoverflow</li>
-                        <li>Twitter</li>
-                        <li>Codepen</li>
-                        <li>Email</li>
+                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/github.svg" alt=""></a></li>
+                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/stackoverflow.svg" alt=""></a></li>
+                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/twitter.svg" alt=""></a></li>
+                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/freecodecamp.svg" alt=""></a></li>
+                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/codepen.svg" alt=""></a></li>
+                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/gmail.svg" alt=""></a></li>
                     </ul>
                 </nav>
             </div>
@@ -119,33 +120,39 @@ document.addEventListener('touchmove', function (e) {
                 pr = window.devicePixelRatio || 1,
                 w = window.innerWidth,
                 h = window.innerHeight,
-                f = 90,
+                f = 120,
                 q,
                 m = Math,
                 r = 0,
                 u = m.PI*2,
-                v = m.cos,
-                z = m.random
+                v = m.sin,
+                z = m.random,
+                color,
+                colors = [];
             c.width = w*pr
             c.height = h*pr
             x.scale(pr, pr)
-            x.globalAlpha = 0.3
+            x.globalAlpha = 0.5
             function i(){
-                x.clearRect(0,0,w,h)
-                q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
-                while(q[1].x<w+f) d(q[0], q[1])
+                colors = [];
+                x.clearRect(0, 0, w, h)
+                q =[{x:0, y:h*.7 + f}, {x:0, y:h*.7 -f }]
+                while(q[1].x < w+f) d(q[0], q[1])
+                document.body.style.setProperty('--profileImageBackground', color);
+                document.body.style.setProperty('--profileImageBackgroundTwo', colors[1]);
             }
-            function d(i,j){   
+            function d(i, j){   
                 x.beginPath()
                 x.moveTo(i.x, i.y)
                 x.lineTo(j.x, j.y)
-                var k = j.x + (z()*2-0.25)*f,
+                var k = j.x + (z()*2 - 0.25)*f,
                     n = y(j.y)
                 x.lineTo(k, n)
                 x.closePath()
-                r-=u/-50
-                x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
-                console.log(x.fillStyle);
+                r -= u/-200
+                color = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16);
+                colors.push(color);
+                x.fillStyle = color;
                 x.fill()
                 q[0] = q[1]
                 q[1] = {x:k,y:n}
