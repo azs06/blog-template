@@ -1,0 +1,133 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+:root{
+    --primaryColor: #e81c4f;
+}
+body{
+    margin: 0 auto;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.4;
+    padding: 0;
+    margin: 0;
+    color: #566b78;
+    font-size: 16px;
+    background: #f3f3f3;
+}
+main{
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 4em 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: #333;
+}
+
+code,
+pre {
+  background: #f5f7f9;
+  border-bottom: 1px solid #d8dee9;
+  color: #a7adba;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  border-left: 2px solid #69c;
+  padding: 1em;
+}
+
+a{
+    color: var(--primaryColor);
+}
+header{
+    text-align: center;
+}
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+header a {
+    border-radius: 290486px;
+    color: var(--primaryColor);
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: none 200ms ease-out;
+    transition-property: color, background;
+}
+header a:hover {
+    background:  #e81c4f;
+    color: white;
+}
+
+nav ul li{
+    display: inline;
+}
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6.5rem 0;
+    &__intro{
+        text-align: center;
+        &-hello{
+            font-size: 35px;
+        }
+    }
+}
+.image-container{
+    width: 250px;
+    height: auto;
+}
+.image-container img{
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+}
+
+.heading{
+    font-size: 20px;
+    text-align: left;
+}
+.container{
+    margin-bottom: 50px;
+}
+
+.blog-section {
+    border-radius: 16px;
+    background-color: #f8f8f9;
+    transition: box-shadow 80ms,background-color 80ms;
+    padding: 16px 24px 24px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn .8s ease-out 1;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    box-shadow: -12px -12px 28px #fff ,12px 12px 28px rgb(8 8 12 / 3%);
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
