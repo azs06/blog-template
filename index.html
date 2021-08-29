@@ -12,15 +12,14 @@
         <header class="navigation-header">
             <nav>
                 <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>Projects</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                 </ul>
             </nav>
         </header>
         <div class="container">
             <section class="hero-section">
-                <canvas width="1440" height="715"></canvas>
                 <figure class="image-container">
                     <img src="https://avatars.githubusercontent.com/u/1593663?v=4" alt="">
                 </figure>
@@ -40,7 +39,7 @@
                     </section>
                 </div>
             </section>
-            <section class="blog-section">
+            <section id="blog" class="blog-section">
                 <header class="heading blog-heading">
                     <h3 class="blog-section__title">Blog</h3>
                 </header>
@@ -52,7 +51,7 @@
                     <p>
                         If you have troubles with z-index and positioning, this is for you. Let's see how to understand the CSS stacking context.
                     </p>
-                    <a href="">
+                    <a href="single-blog.html">
                         Read More →
                     </a>
                 </article>
@@ -64,7 +63,7 @@
                     <p>
                         If you have troubles with z-index and positioning, this is for you. Let's see how to understand the CSS stacking context.
                     </p>
-                    <a href="">
+                    <a href="single-blog.html">
                         Read More →
                     </a>
                 </article>
@@ -76,7 +75,7 @@
                     <p>
                         If you have troubles with z-index and positioning, this is for you. Let's see how to understand the CSS stacking context.
                     </p>
-                    <a href="">
+                    <a href="single-blog.html">
                         Read More →
                     </a>
                 </article>
@@ -88,82 +87,27 @@
                     <p>
                         If you have troubles with z-index and positioning, this is for you. Let's see how to understand the CSS stacking context.
                     </p>
-                    <a href="">
+                    <a href="single-blog.html">
                         Read More →
                     </a>
                 </article>
             </section>
         </div>
-        <footer>
-            <div class="footer-container">
-                <p class="copyright">Copyright &copy; 2021</p>
-                <nav class="footer-links">
-                    <ul>
-                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/github.svg" alt=""></a></li>
-                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/stackoverflow.svg" alt=""></a></li>
-                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/twitter.svg" alt=""></a></li>
-                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/freecodecamp.svg" alt=""></a></li>
-                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/codepen.svg" alt=""></a></li>
-                        <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/gmail.svg" alt=""></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
     </main>
-    <script>
-
-document.addEventListener('touchmove', function (e) {
-                e.preventDefault()
-            })
-            var c = document.getElementsByTagName('canvas')[0],
-                x = c.getContext('2d'),
-                pr = window.devicePixelRatio || 1,
-                w = window.innerWidth,
-                h = window.innerHeight,
-                f = 120,
-                q,
-                m = Math,
-                r = 0,
-                u = m.PI*2,
-                v = m.sin,
-                z = m.random,
-                color,
-                colors = [];
-            c.width = w*pr
-            c.height = h*pr
-            x.scale(pr, pr)
-            x.globalAlpha = 0.5
-            function i(){
-                colors = [];
-                x.clearRect(0, 0, w, h)
-                q =[{x:0, y:h*.7 + f}, {x:0, y:h*.7 -f }]
-                while(q[1].x < w+f) d(q[0], q[1])
-                document.body.style.setProperty('--profileImageBackground', color);
-                document.body.style.setProperty('--profileImageBackgroundTwo', colors[1]);
-            }
-            function d(i, j){   
-                x.beginPath()
-                x.moveTo(i.x, i.y)
-                x.lineTo(j.x, j.y)
-                var k = j.x + (z()*2 - 0.25)*f,
-                    n = y(j.y)
-                x.lineTo(k, n)
-                x.closePath()
-                r -= u/-200
-                color = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16);
-                colors.push(color);
-                x.fillStyle = color;
-                x.fill()
-                q[0] = q[1]
-                q[1] = {x:k,y:n}
-            }
-            function y(p){
-                var t = p + (z()*2-1.1)*f
-                return (t>h||t<0) ? y(p) : t
-            }
-            document.onclick = i
-            document.ontouchstart = i
-            i() 
-    </script>    
+    <footer class="footer-container">
+        <div class="footer-container__inner">
+            <p class="copyright">Copyright &copy; 2021</p>
+            <nav class="footer-links">
+                <ul>
+                    <li><a class="icon-container ico" href=""><img  class="icon" src="./assets/icons/github.svg" alt=""></a></li>
+                    <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/stackoverflow.svg" alt=""></a></li>
+                    <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/twitter.svg" alt=""></a></li>
+                    <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/freecodecamp.svg" alt=""></a></li>
+                    <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/codepen.svg" alt=""></a></li>
+                    <li><a class="icon-container" href=""><img class="icon" src="./assets/icons/gmail.svg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>    
 </body>
 </html>
