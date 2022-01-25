@@ -90,6 +90,9 @@ nav ul li{
         &-hello{
             font-size: 35px;
         }
+        &-text{
+            line-height: 2rem;
+        }
     }
 }
 .image-container{
