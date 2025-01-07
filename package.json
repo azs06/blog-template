@@ -1,22 +1,20 @@
 {
   "name": "blog-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "Md. Atiquzzaman Soikat<atiq.soikat@gmail.com>",
-  "license": "ISC",
   "devDependencies": {
-    "@snowpack/plugin-postcss": "^1.2.1",
-    "cssnano": "^4.1.10",
-    "postcss": "^8.2.8",
-    "postcss-cli": "^8.3.1",
-    "postcss-nested": "^5.0.5",
-    "postcss-preset-env": "^6.7.0",
-    "snowpack": "^3.1.2"
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^10.1.3"
   }
 }
