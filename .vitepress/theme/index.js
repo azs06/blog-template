@@ -1,10 +1,17 @@
-// You can directly import Vue files in the theme entry
-// VitePress is pre-configured with @vitejs/plugin-vue.
-import Layout from "./Layout.vue";
+// https://vitepress.dev/guide/custom-theme
+import { h } from 'vue'
+import DefaultTheme from 'vitepress/theme'
+import './style.css'
 
+/** @type {import('vitepress').Theme} */
 export default {
-  Layout,
-  enhanceApp({ app, router, siteData }) {
-    console.log({ app });
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+    })
   },
-};
+  enhanceApp({ app, router, siteData }) {
+    // ...
+  }
+}

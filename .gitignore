@@ -3,4 +3,5 @@ node_modules
 assets/.DS_Store
 .DS_Store
 vite-project
-.vitepress/cache
+.vitepress/dis
+.vitepress/cache 
