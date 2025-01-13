@@ -1,7 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
-import DefaultTheme from 'vitepress/theme'
-import './style.css'
+import { h } from "vue";
+import DefaultTheme from "vitepress/theme";
+import "./style.css";
+import HeroImage from "./HeroImage.vue";
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -9,9 +10,10 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
+      'home-hero-image': () => h(HeroImage)
+    });
   },
   enhanceApp({ app, router, siteData }) {
     // ...
-  }
-}
+  },
+};
