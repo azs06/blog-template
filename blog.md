@@ -3,7 +3,7 @@ title: Blog
 ---
 
 <script setup>
-import BlogList from './BlogList.vue'
+import BlogList from './components/BlogList.vue'
 </script>
 
 <BlogList />

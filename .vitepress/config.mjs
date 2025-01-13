@@ -21,6 +21,13 @@ export default defineConfig({
           { text: "Runtime API Examples", link: "/api-examples" },
         ],
       },
+      "/projects": {
+        text: "Notes",
+        items: [
+          { text: "Open Source Projects", link: "/markdown-examples" },
+          { text: "Professional Projects", link: "/api-examples" },
+        ],
+      },
     },
     footer: {
       message: "Made with vitepress",

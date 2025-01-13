@@ -106,20 +106,6 @@ header a {
   letter-spacing: 0.2em;
   padding: 1em 2em;
   text-transform: uppercase;
-  text-decoration: none;
-  transition: none 200ms ease-out;
-  transition-property: color, background;
-}
-header a:hover {
-  color: white;
-}
-
-nav ul li {
-  display: inline;
-}
-
-.navigation-header {
-  text-align: center;
 }
 .hero-section {
   display: flex;
@@ -127,7 +113,7 @@ nav ul li {
   align-items: center;
   margin: 6.5rem 0;
   &__intro {
-    text-align: center;
+    text-align: left;
     &-hello {
       font-size: 35px;
     }

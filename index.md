@@ -11,7 +11,7 @@ layout: home
           </figure>
           <div class="hero-section__intro">
             <h2 class="hero-section__intro-hello">
-              Hello, I’m Md. Atiquzzaman Soikat
+              About Me
             </h2>
             <div class="hero-section__intro-text">
               <p>
