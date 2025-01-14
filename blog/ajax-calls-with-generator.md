@@ -2,7 +2,12 @@
 date: 2022-01-23
 title: "Ajax Calls Using Generator"
 author: "Md Atiquzzaman Soikat"
+excerpt: "Explore how we can make ajax requests using generator"
+tags: ["js"]
 ---
+
+## Ajax Calls Using Generator
+
 Let's first get familiar with generator, generator is special type of function which you can pause and resume at will. Here is a simple generaor
 
 **Simple Generator Function**
