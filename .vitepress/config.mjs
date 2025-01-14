@@ -9,7 +9,6 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Blog", link: "/blog" },
-      { text: "Notes", link: "/notes" },
       { text: "Projects", link: "/projects" },
     ],
 
@@ -34,7 +33,7 @@ export default defineConfig({
       copyright: "Copyright © 2025 Md Atiquzzaman Soikat",
     },
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/azs06" },
     ],
   },
 });
