@@ -13,18 +13,11 @@ export default defineConfig({
     ],
 
     sidebar: {
-      "/notes": {
-        text: "Notes",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
       "/projects": {
         text: "Notes",
         items: [
-          { text: "Open Source Projects", link: "/markdown-examples" },
-          { text: "Professional Projects", link: "/api-examples" },
+          { text: "Open Source Projects", link: "/projects/personal" },
+          { text: "Professional Projects", link: "/projects/professional" },
         ],
       },
     },
