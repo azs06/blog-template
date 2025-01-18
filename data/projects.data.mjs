@@ -68,7 +68,7 @@ export default {
           url: "https://github.com/Skipper-Hospitality/organisms",
           repo: "Skipper-Hospitality/organisms",
           tags: ["Webcomponent", "Typescript", "Node.js"],
-          stars: 0,
+          stars: 2,
         },
         {
           id: 8,

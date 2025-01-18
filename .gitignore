@@ -5,3 +5,4 @@ assets/.DS_Store
 vite-project
 .vitepress/dis
 .vitepress/cache 
+.env

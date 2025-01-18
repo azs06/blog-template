@@ -21,8 +21,6 @@ const displayStars = computed(() => project?.stars > 0 ? `⭐ ${project?.stars}`
       <span v-for="tag in project.tags" :key="tag" class="project-tag">
         {{ tag }}
       </span>
-    </div>
-    <div class="repo-meta">
       <span v-if="stars > 0">{{ displayStars }}</span>
     </div>
   </div>
