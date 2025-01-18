@@ -7,8 +7,8 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Blog", link: "/blog" },
-      { text: "Work", link: "/works" },
-      { text: "Projects", link: "/projects" },
+      { text: "Work", link: "/works/" },
+      { text: "Projects", link: "/projects/" },
     ],
     footer: {
       message: "Made with vitepress",

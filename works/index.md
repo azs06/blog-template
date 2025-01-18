@@ -2,7 +2,6 @@
 title: "About My work"
 ---
 <script setup>
-    import Works from "../components/Works.vue"
     import WorkExperienceList from "../components/WorkExperienceList.vue"
 </script>
 
