@@ -10,6 +10,7 @@ export default defineConfig({
       { text: "Work", link: "/works/" },
       { text: "Projects", link: "/projects/" },
     ],
+    aside: false,
     footer: {
       message: "Made with vitepress",
       copyright: "Copyright © 2025 Md Atiquzzaman Soikat",
