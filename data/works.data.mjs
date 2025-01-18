@@ -10,6 +10,8 @@ export default {
           url: "https://www.crunchbase.com/organization/jetaport",
           tags: ["Vue", "Ember.js", "Laravel"],
           type: "work",
+          duration: "",
+          jobSummary: "",
         },
         {
           id: 2,
@@ -20,6 +22,8 @@ export default {
           url: "https://www.crunchbase.com/organization/butler-hospitality",
           tags: ["React", "TypeScript"],
           type: "personal",
+          duration: "",
+          jobSummary: "",
         },
         {
           id: 3,
@@ -30,6 +34,8 @@ export default {
           url: "https://www.skipperhospitality.com/",
           tags: ["React", "TypeScript"],
           type: "personal",
+          duration: "",
+          jobSummary: "",
         },
       ],
     };

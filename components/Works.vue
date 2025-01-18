@@ -1,10 +1,11 @@
 <script setup lang="js">
 import {data as projects} from "../data/works.data.mjs"
+console.log(projects)
 </script>
 
 <template>
   <div class="projects-container">
-    <div v-for="project in projects" :key="project.id" class="project-card">
+    <div v-for="project in projects.data" :key="project.id" class="project-card">
       <h3 class="project-title">
         <a
           v-if="project.url"
