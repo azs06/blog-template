@@ -5,23 +5,23 @@ import WorkExperience from "./WorkExperience.vue";
 const experiences = ref([
   {
     company: "Jetaport",
-    role: "Technical Project Manager",
-    duration: "2016 - 2019",
-    description: "Led frontend development and managed technical projects for travel booking platforms.",
+    role: "Frontend Engineer",
+    duration: "2015 - 2018",
+    description: "Worked as frontend engineer in developing our group booking platform, and other internal applications.",
     companyUrl: "https://www.jetaport.com",
   },
   {
     company: "Butler Hospitality",
-    role: "Frontend Engineer & Team Lead",
+    role: "Senior Frontend Engineer & Team Lead",
     duration: "2019 - 2022",
-    description: "Developed a scalable, modular UI system for hotel room service and operational logistics.",
+    description: "Worked as a senior developer for several key projects, Worked on mobile and iPad application development, also on the internal OMS application.",
     companyUrl: "https://www.butlerhospitality.com",
   },
   {
     company: "Skipper Hospitality",
-    role: "Senior Frontend Engineer",
+    role: "Senior Frontend Engineer & Team Lead",
     duration: "2022 - Present",
-    description: "Architecting frontend solutions and mentoring teams in modern web technologies.",
+    description: "Lead the development of Skipper Booking Widget, worked as a senior engineer for several client websites and key internal projects.",
     companyUrl: "https://www.skipperhospitality.com",
   },
 ]);

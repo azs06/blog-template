@@ -14,8 +14,20 @@ defineProps({
   },
   projectUrl: {
     type: String,
+    default: "#",
+  },
+  company: {
+    type: String,
     default: "",
   },
+  tags: {
+    type: Array,
+    default: [],
+  },
+  companyUrl: {
+    type: String,
+    default: "#",
+  }
 });
 </script>
 
@@ -24,10 +36,18 @@ defineProps({
     <div class="image-container">
       <img :src="imageUrl" :alt="title" loading="lazy" />
     </div>
+
     <div class="content">
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
-      <a v-if="projectUrl" :href="projectUrl" target="_blank" class="project-link">View Project</a>
+      <p><a class="company VPLink link" target="_blank" :href="companyUrl" >{{ company }}</a></p>
+      <a
+        v-if="projectUrl"
+        :href="projectUrl"
+        target="_blank"
+        class="project-link"
+        >View Project</a
+      >
     </div>
   </div>
 </template>
@@ -64,8 +84,6 @@ defineProps({
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image covers the area properly */
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
 }
 
 .content {
@@ -94,8 +112,14 @@ p {
   font-size: 0.9rem;
   transition: background 0.2s ease-in-out;
 }
+.company{
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
 
 .project-link:hover {
   background: #024b9c;
+  color: #fff;
 }
 </style>

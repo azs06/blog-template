@@ -56,15 +56,6 @@ body {
   line-height: 1.4;
   font-size: 16px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  color: #333;
-}
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -73,6 +64,7 @@ strong {
   &__intro {
     text-align: left;
     &-hello {
+      color: var(--vp-c-text-1);
       font-size: 35px;
     }
     &-text {
@@ -80,7 +72,7 @@ strong {
     }
   }
 }
-.image-container {
+.profile_image-container {
   width: 250px;
   height: 250px;
   display: flex;
@@ -89,7 +81,7 @@ strong {
   border-radius: 50%;
   margin-bottom: 3rem;
 }
-.image-container img {
+.profile_image-container img {
   border-radius: 50%;
   width: inherit;
   height: inherit;
