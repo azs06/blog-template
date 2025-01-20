@@ -1,13 +1,12 @@
 <script setup lang="js">
 import ProjectCard from "./ProjectCard.vue";
 import {data as projects} from "../data/projects.data.mjs"
-import { ref, onMounted } from "vue";
+import { ref, onMounted, reactive } from "vue";
 
 const github_username = "azs06";
 const githubToken = import.meta.env.VITE_GITHUB_API_TOKEN;
 const loading = ref(true);
-const computedProjects = ref([projects.data]);
-
+const computedProjects = ref(projects.data);
 
 const headers = {
       Authorization: `token ${githubToken}`, // Add GitHub token for higher rate limits
@@ -62,7 +61,7 @@ onMounted(async () => {
   <div class="projects-container">
     <div
       v-for="project in computedProjects"
-      :key="project.id"
+      :key="project.id + project.stars + project.title"
       class="project-card"
     >
       <ProjectCard :project="project"></ProjectCard>
