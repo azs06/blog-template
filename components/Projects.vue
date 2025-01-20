@@ -6,7 +6,7 @@ import { ref, onMounted } from "vue";
 const github_username = "azs06";
 const githubToken = import.meta.env.VITE_GITHUB_API_TOKEN;
 const loading = ref(true);
-const computedProjects = ref([]);
+const computedProjects = ref([projects.data]);
 
 
 const headers = {
@@ -48,22 +48,13 @@ const fetchRepos = async (username) => {
 };
 
 onMounted(async () => {
-console.log(githubToken)
-const repos = await fetchRepos(github_username);
-computedProjects.value = projects.data.map(project => {
-  const projectRepo = repos.find(r => r.name == project.repo);
-  if(projectRepo){
-    return {
-      ...project,
-      stars: projectRepo.stargazers_count
-    }
+  const repos = await fetchRepos(github_username);
+  if (repos) {
+    computedProjects.value = computedProjects.value.map(project => {
+      const projectRepo = repos.find(r => r.name === project.repo);
+      return projectRepo ? { ...project, stars: projectRepo.stargazers_count } : project;
+    });
   }
-  return {
-    ...project
-  }
-})
-
-  return computedProjects;
 });
 </script>
 
