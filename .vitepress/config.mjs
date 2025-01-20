@@ -9,6 +9,7 @@ export default defineConfig({
       { text: "Blog", link: "/blog" },
       { text: "Work", link: "/works/" },
       { text: "Projects", link: "/projects/" },
+      { text: "Notes", link: "https://azs06.github.io/learning-notes" },
     ],
     aside: false,
     footer: {
