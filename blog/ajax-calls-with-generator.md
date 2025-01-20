@@ -1,5 +1,5 @@
 ---
-date: 2022-01-23
+date: 2022-02-20
 title: "Ajax Calls Using Generator"
 author: "Md Atiquzzaman Soikat"
 excerpt: "Explore how we can make ajax requests using generator"

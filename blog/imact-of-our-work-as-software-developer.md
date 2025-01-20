@@ -1,5 +1,5 @@
 ---
-date: 2022-01-23
+date: 2023-07-01
 title: "Impact of our work as software developer"
 author: "Md Atiquzzaman Soikat"
 excerpt: "Every line of code we write impacts real lives. As developers, we must consider accessibility, performance, and user experience - our work shapes how people interact with technology daily."
