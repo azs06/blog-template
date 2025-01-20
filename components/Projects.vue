@@ -48,6 +48,7 @@ const fetchRepos = async (username) => {
 };
 
 onMounted(async () => {
+console.log(githubToken)
 const repos = await fetchRepos(github_username);
 computedProjects.value = projects.data.map(project => {
   const projectRepo = repos.find(r => r.name == project.repo);
