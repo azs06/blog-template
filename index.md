@@ -3,7 +3,7 @@ layout: home
 ---
 <div class="container">
         <section class="hero-section" aria-label="About section">
-          <figure class="image-container">
+          <figure class="image-container profile_image-container" aria-label="Author's portrait">
             <img
               src="https://avatars.githubusercontent.com/u/1593663?v=4"
               alt="Author's portrait"

@@ -95,7 +95,7 @@ nav ul li{
         }
     }
 }
-.image-container{
+.profile_image-container{
     width: 250px;
     height: 250px;
     display: flex;
@@ -104,7 +104,7 @@ nav ul li{
     border-radius: 50%;
     margin-bottom: 3rem;
 }
-.image-container img{
+.profile_image-container img{
     border-radius: 50%;
     width: inherit;
     height: inherit;
